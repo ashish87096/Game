@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A rock beats scissors, scissors beat paper by cutting it, and paper beats rock by covering it. In this simulation, the computer has two different strategies that it can follow. Rock, paper, scissors is an example of a zero-sum game without perfect information. Whenever one player wins, the other loses.">
+    <title>Rock Paper Scissors Game - Sample Project</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleeffect.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark" style="justify-content: center;">
+            <a class="navbar-brand" href="#">
+                <img src="images/photo1.jpg" width="30" height="30" class="d-inline-block align-top" alt="No Icon">
+                Rock,Paper Scissors
+            </a>
+        </nav>
+    </header>
+    <main>
+        <h1>Select Rock, Paper or Scissors</h1>
+        <div class="selection">
+            <a onclick="
+            FunRandNumGen ();
+            FunRock();
+            FunDispMoves();" id="IdRock">
+                <img class="img" src="images/Rock.png" alt="Rock">
+                <p>Rock</p>
+            </a>
+            <a onclick="
+            FunRandNumGen ();
+            FunPaper();
+            FunDispMoves();" id="IdPaper">
+                <img class="img" src="images/Paper.png" alt="Paper">
+                <p>Paper</p>
+            </a>
+            <a onclick="
+            FunRandNumGen ();
+            FunScissors();
+            FunDispMoves();" id="IdScissors">
+                <img class="img" src="images/Scissors.png" alt="Scissors">
+                <p>Scissors</p>
+            </a>
+        </div>
+        <hr>
+        <div class="secdiv">
+            <a>
+                <p>You Choose</p><img class="img" id="quesone" src="images/question mark.png" alt="Your Choice"></img>
+            </a>
+            <a>
+                <p>Computer Choose</p><img class="img" id="questwo" src="images/question mark.png"
+                    alt="Your Choice"></img>
+            </a>
+        </div>
+        <hr>
+        <div class="third-div">
+            <p id="result">Result</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Wins:</th>
+                        <td id="wins">0</td>
+                    </tr>
+                    <tr>
+                        <th>Looses:</th>
+                        <td id="losses">0</td>
+                    </tr>
+                    <tr>
+                        <th>Ties:</th>
+                        <td id="ties">0</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="div-btn">
+            <button onclick="
+        score.wins = 0;
+        score.losses = 0;
+        score.ties = 0;
+        localStorage.removeItem('score');
+        updateScoreElement();
+        " id="reset-score-button">Reset Score</button>
+            </div>
+
+        </div>
+        <script src="script.js"></script>
+    </main>
+    <footer>
+        <p>Open Source project</p>
+    </footer>
+</body>
+
+</html>
