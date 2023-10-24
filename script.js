@@ -23,6 +23,7 @@ function updateScoreElement() {
     document.getElementById('quesone').style.border = '0px solid black';
     document.getElementById('wins').style.backgroundColor = 'black';
     document.getElementById('result').style.backgroundColor = 'rgba(49, 46, 46, 0.555)';
+    document.getElementById('result').innerText = 'Result';
     /*document.querySelector('.js-score')
       .innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;*/
   }
