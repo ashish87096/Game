@@ -24,6 +24,8 @@ function updateScoreElement() {
     document.getElementById('wins').style.backgroundColor = 'black';
     document.getElementById('result').style.backgroundColor = 'rgba(49, 46, 46, 0.555)';
     document.getElementById('result').innerText = 'Result';
+    document.getElementById('quesone').src = 'images/question mark.png';
+    document.getElementById('questwo').src = 'images/question mark.png';
     /*document.querySelector('.js-score')
       .innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;*/
   }
